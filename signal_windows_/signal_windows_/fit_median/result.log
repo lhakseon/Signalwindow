@@ -1,0 +1,529 @@
+(Make2Dplots &) @0x7f583f024028
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.52842e-05
+NDf                       =           86
+Edm                       =  4.11423e-07
+NCalls                    =          455
+p0                        =   -0.0053389   +/-   0.000136148 
+p1                        =    -0.727417   +/-   0.0118563   
+p2                        =    0.0536477   +/-   0.00932046  
+p3                        =     0.384252   +/-   0.00190359  
+
+Info in <TCanvas::Print>: png file PixEG1_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.18635e-05
+NDf                       =           86
+Edm                       =  3.04468e-06
+NCalls                    =          588
+p0                        =   0.00231288   +/-   0.000222888 
+p1                        =      -1.8997   +/-   0.0352784   
+p2                        =    -0.912872   +/-   0.0181085   
+p3                        =    0.0279634   +/-   0.012199    
+
+Info in <TCanvas::Print>: png file PixEG2_|#eta|<0.8.png has been created
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  2.40574e-05
+NDf                       =           86
+Edm                       =  1.16217e-05
+NCalls                    =          780
+p0                        =   0.00132354   +/-   0.000233063 
+p1                        =     -1.32547   +/-   0.0204931   
+p2                        =    -0.546681   +/-   0.00953162  
+p3                        =     0.211393   +/-   0.00364918  
+
+Info in <TCanvas::Print>: png file PixEG3_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.11984e-05
+NDf                       =           86
+Edm                       =  4.31491e-06
+NCalls                    =          776
+p0                        =   0.00139868   +/-   0.000325757 
+p1                        =     -1.05636   +/-   0.031156    
+p2                        =     -1.06343   +/-   0.0124982   
+p3                        =    -0.662016   +/-   0.0313649   
+
+Info in <TCanvas::Print>: png file PixEG4_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  2.09164e-05
+NDf                       =           86
+Edm                       =  1.28472e-06
+NCalls                    =          437
+p0                        =   0.00542404   +/-   0.000158822 
+p1                        =     0.714724   +/-   0.0138547   
+p2                        =    0.0680873   +/-   0.0110192   
+p3                        =     0.387462   +/-   0.00221489  
+
+Info in <TCanvas::Print>: pdf file PixPixEG1_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   1.6739e-05
+NDf                       =           86
+Edm                       =  8.77647e-07
+NCalls                    =          789
+p0                        = -0.000900345   +/-   0.000190111 
+p1                        =      1.18445   +/-   0.028561    
+p2                        =     -1.07449   +/-   0.00542716  
+p3                        =     -0.68413   +/-   0.0419392   
+
+Info in <TCanvas::Print>: pdf file PixPixEG2_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   1.7066e-05
+NDf                       =           86
+Edm                       =  1.14151e-06
+NCalls                    =          549
+p0                        =   -0.0014976   +/-   0.00028048  
+p1                        =      1.91115   +/-   0.0713416   
+p2                        =    -0.782877   +/-   0.0339895   
+p3                        =     0.129401   +/-   0.0154801   
+
+Info in <TCanvas::Print>: pdf file PixPixEG3_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  3.18668e-05
+NDf                       =           86
+Edm                       =   2.2891e-06
+NCalls                    =          400
+p0                        =   0.00585251   +/-   0.000176866 
+p1                        =     0.529829   +/-   0.0138177   
+p2                        =     0.235832   +/-   0.0143913   
+p3                        =     0.411657   +/-   0.00250366  
+
+Info in <TCanvas::Print>: pdf file PixPixEG4_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.67741e-05
+NDf                       =           86
+Edm                       =  1.52971e-07
+NCalls                    =          526
+p0                        =  0.000509798   +/-   0.00021019  
+p1                        =      1.58224   +/-   0.0236167   
+p2                        =    -0.577243   +/-   0.00822519  
+p3                        =     0.226961   +/-   0.00326911  
+
+Info in <TCanvas::Print>: pdf file PixPixEG5_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      1.8e-05
+NDf                       =           86
+Edm                       =  1.02543e-06
+NCalls                    =          849
+p0                        =  -0.00041153   +/-   0.000277593 
+p1                        =      1.18637   +/-   0.0434178   
+p2                        =     -1.09453   +/-   0.012161    
+p3                        =    -0.628297   +/-   0.032543    
+
+Info in <TCanvas::Print>: pdf file PixPixEG6_|#eta|<0.8.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.11933e-05
+NDf                       =           86
+Edm                       =  7.23724e-10
+NCalls                    =          150
+p0                        =  0.000997953   +/-   1.30242e-05  	 (limited)
+p1                        =    0.0575436   +/-   0.0011752    	 (limited)
+p2                        =    0.0996354   +/-   0.000630655  	 (limited)
+p3                        =     0.486159   +/-   0.000328427  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix1_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  2.08697e-06
+NDf                       =           86
+Edm                       =  3.95751e-06
+NCalls                    =          209
+p0                        = -0.000305871   +/-   4.05591e-06  	 (limited)
+p1                        =    0.0558561   +/-   0.000772489  	 (limited)
+p2                        =   -0.0860272   +/-   0.000181545  	 (limited)
+p3                        =     0.290222   +/-   9.6899e-05   	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix2_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  7.38717e-06
+NDf                       =           86
+Edm                       =  8.46441e-06
+NCalls                    =          194
+p0                        =  -0.00154479   +/-   1.41687e-05  	 (limited)
+p1                        =    0.0672124   +/-   0.00144992   	 (limited)
+p2                        =    -0.075239   +/-   0.000430841  	 (limited)
+p3                        =     0.246553   +/-   0.000200391  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix3_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   1.7986e-06
+NDf                       =           86
+Edm                       =  1.51962e-06
+NCalls                    =          210
+p0                        = -0.000305638   +/-   5.64972e-06  	 (limited)
+p1                        =    0.0559632   +/-   0.000713301  	 (limited)
+p2                        =   -0.0731907   +/-   0.000276565  	 (limited)
+p3                        =     0.292186   +/-   0.00015808   	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix4_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  9.63366e-06
+NDf                       =           86
+Edm                       =  6.58131e-06
+NCalls                    =          186
+p0                        =  -0.00236843   +/-   1.51073e-05  	 (limited)
+p1                        =    0.0658313   +/-   0.00151041   	 (limited)
+p2                        =   -0.0702703   +/-   0.000544738  	 (limited)
+p3                        =     0.225036   +/-   0.000222927  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix5_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  7.09227e-06
+NDf                       =           86
+Edm                       =  4.71643e-06
+NCalls                    =          187
+p0                        =  -0.00127933   +/-   1.42061e-05  	 (limited)
+p1                        =    0.0658706   +/-   0.00105387   	 (limited)
+p2                        =   -0.0709623   +/-   0.000535963  	 (limited)
+p3                        =     0.252926   +/-   0.000305349  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix6_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  6.43268e-08
+NDf                       =           86
+Edm                       =  3.80283e-08
+NCalls                    =          256
+p0                        =  0.000308616   +/-   1.16468e-06  	 (limited)
+p1                        =    0.0496943   +/-   0.000136074  	 (limited)
+p2                        =   -0.0102675   +/-   4.70612e-05  	 (limited)
+p3                        =     0.362024   +/-   1.77741e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix7_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   1.4989e-06
+NDf                       =           86
+Edm                       =  2.31261e-06
+NCalls                    =          222
+p0                        = -0.000158224   +/-   6.59703e-06  	 (limited)
+p1                        =    0.0664213   +/-   0.000583448  	 (limited)
+p2                        =    -0.104272   +/-   0.000270087  	 (limited)
+p3                        =       0.2975   +/-   0.000139861  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix8_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  6.85103e-07
+NDf                       =           86
+Edm                       =  9.15514e-07
+NCalls                    =          212
+p0                        =  0.000122587   +/-   2.35531e-06  	 (limited)
+p1                        =    0.0724407   +/-   0.000373054  	 (limited)
+p2                        =   -0.0830396   +/-   0.000158249  	 (limited)
+p3                        =     0.324578   +/-   9.79633e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix9_|#eta|<0.8.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.26043e-07
+NDf                       =           86
+Edm                       =  1.39708e-07
+NCalls                    =          252
+p0                        =  0.000241125   +/-   1.81242e-06  	 (limited)
+p1                        =    0.0489296   +/-   0.000121025  	 (limited)
+p2                        =   -0.0287921   +/-   4.50171e-05  	 (limited)
+p3                        =     0.351007   +/-   2.32337e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix10_|#eta|<0.8.png has been created
+DONE
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  7.55027e-05
+NDf                       =           86
+Edm                       =  5.71093e-06
+NCalls                    =          345
+p0                        =    0.0115207   +/-   0.00132485  
+p1                        =    -0.124197   +/-   0.00417958  
+p2                        =    -0.102303   +/-   0.0200948   
+p3                        =     0.130001   +/-   0.0104204   
+
+Info in <TCanvas::Print>: png file PixEG1_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =     6.84e-05
+NDf                       =           86
+Edm                       =  9.18244e-06
+NCalls                    =          358
+p0                        =   0.00729243   +/-   0.0012176   
+p1                        =    -0.113149   +/-   0.00416755  
+p2                        =    -0.102666   +/-   0.0231539   
+p3                        =     0.162219   +/-   0.0113366   
+
+Info in <TCanvas::Print>: png file PixEG2_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  7.54322e-05
+NDf                       =           86
+Edm                       =  7.53798e-06
+NCalls                    =          347
+p0                        =    0.0086576   +/-   0.00129199  
+p1                        =    -0.112517   +/-   0.00461557  
+p2                        =    -0.114831   +/-   0.0256031   
+p3                        =     0.141499   +/-   0.0131723   
+
+Info in <TCanvas::Print>: png file PixEG3_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  8.27126e-05
+NDf                       =           86
+Edm                       =  3.77582e-06
+NCalls                    =          343
+p0                        =    0.0137194   +/-   0.0012818   
+p1                        =    -0.111482   +/-   0.00412957  
+p2                        =   -0.0815731   +/-   0.0200103   
+p3                        =     0.109368   +/-   0.0109628   
+
+Info in <TCanvas::Print>: png file PixEG4_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  3.57453e-05
+NDf                       =           86
+Edm                       =  1.43938e-06
+NCalls                    =          464
+p0                        =  0.000959687   +/-   0.000272298 
+p1                        =     0.242322   +/-   0.0261034   
+p2                        =    -0.326985   +/-   0.0592507   
+p3                        =      0.29236   +/-   0.0158142   
+
+Info in <TCanvas::Print>: pdf file PixPixEG1_2.7<|#eta|<3.0.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  9.55506e-05
+NDf                       =           86
+Edm                       =  7.52405e-06
+NCalls                    =          353
+p0                        =   -0.0110702   +/-   0.0014741   
+p1                        =      0.12265   +/-   0.00506355  
+p2                        =    -0.102294   +/-   0.0255359   
+p3                        =     0.132069   +/-   0.01265     
+
+Info in <TCanvas::Print>: pdf file PixPixEG2_2.7<|#eta|<3.0.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  9.35626e-05
+NDf                       =           86
+Edm                       =  9.01144e-06
+NCalls                    =          360
+p0                        =  -0.00887246   +/-   0.00141194  
+p1                        =     0.121338   +/-   0.00525866  
+p2                        =    -0.118695   +/-   0.027613    
+p3                        =     0.146126   +/-   0.0130966   
+
+Info in <TCanvas::Print>: pdf file PixPixEG3_2.7<|#eta|<3.0.pdf has been created
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  6.05175e-05
+NDf                       =           86
+Edm                       =  1.35584e-05
+NCalls                    =          404
+p0                        =  -0.00102077   +/-   0.000453915 
+p1                        =     0.184556   +/-   0.0195484   
+p2                        =    -0.440349   +/-   0.0575773   
+p3                        =     0.164379   +/-   0.0149481   
+
+Info in <TCanvas::Print>: pdf file PixPixEG4_2.7<|#eta|<3.0.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  9.66817e-05
+NDf                       =           86
+Edm                       =  1.08101e-05
+NCalls                    =          388
+p0                        =  -0.00672949   +/-   0.00139071  
+p1                        =     0.116739   +/-   0.0061955   
+p2                        =    -0.134798   +/-   0.0321688   
+p3                        =     0.159344   +/-   0.0162385   
+
+Info in <TCanvas::Print>: pdf file PixPixEG5_2.7<|#eta|<3.0.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  0.000101062
+NDf                       =           86
+Edm                       =  1.07814e-05
+NCalls                    =          382
+p0                        =   -0.0067959   +/-   0.00137312  
+p1                        =     0.107789   +/-   0.00649155  
+p2                        =     -0.12856   +/-   0.0378499   
+p3                        =     0.151515   +/-   0.0176171   
+
+Info in <TCanvas::Print>: pdf file PixPixEG6_2.7<|#eta|<3.0.pdf has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   5.3803e-07
+NDf                       =           86
+Edm                       =   8.7336e-08
+NCalls                    =          206
+p0                        = -0.000167872   +/-   3.97211e-06  	 (limited)
+p1                        =     0.040872   +/-   0.000297922  	 (limited)
+p2                        =     -0.64641   +/-   9.05998e-05  	 (limited)
+p3                        =    0.0898825   +/-   6.27898e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix1_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  2.36963e-07
+NDf                       =           86
+Edm                       =  1.22515e-07
+NCalls                    =          226
+p0                        = -0.000160109   +/-   2.62454e-06  	 (limited)
+p1                        =    0.0505358   +/-   0.000152002  	 (limited)
+p2                        =    -0.576546   +/-   9.25746e-05  	 (limited)
+p3                        =     0.150573   +/-   4.7923e-05   	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix2_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  1.20972e-06
+NDf                       =           86
+Edm                       =  8.79749e-07
+NCalls                    =          232
+p0                        = -0.000357851   +/-   5.33488e-06  	 (limited)
+p1                        =    0.0330564   +/-   0.00031332   	 (limited)
+p2                        =    -0.127095   +/-   0.000241505  	 (limited)
+p3                        =     0.253791   +/-   7.65673e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix3_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   4.5977e-07
+NDf                       =           86
+Edm                       =  1.88636e-07
+NCalls                    =          211
+p0                        = -0.000291764   +/-   1.89831e-06  	 (limited)
+p1                        =    0.0457353   +/-   0.000207533  	 (limited)
+p2                        =    -0.584554   +/-   9.61035e-05  	 (limited)
+p3                        =    0.0971981   +/-   7.11537e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix4_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  4.45294e-07
+NDf                       =           86
+Edm                       =   2.9024e-07
+NCalls                    =          226
+p0                        =  0.000558189   +/-   3.31883e-06  	 (limited)
+p1                        =    0.0463821   +/-   0.00025398   	 (limited)
+p2                        =    0.0426464   +/-   0.000152631  	 (limited)
+p3                        =     0.409592   +/-   4.70727e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix5_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =   3.0715e-06
+NDf                       =           86
+Edm                       =  2.51603e-06
+NCalls                    =          231
+p0                        =  0.000739753   +/-   7.43734e-06  	 (limited)
+p1                        =    0.0590374   +/-   0.000513641  	 (limited)
+p2                        =     0.175366   +/-   0.000274865  	 (limited)
+p3                        =     0.492812   +/-   0.000225186  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix6_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  7.41547e-07
+NDf                       =           86
+Edm                       =  3.28348e-09
+NCalls                    =          244
+p0                        = -0.000254844   +/-   3.62279e-06  	 (limited)
+p1                        =   0.00808754   +/-   0.000403479  	 (limited)
+p2                        =    -0.654797   +/-   0.000160828  	 (limited)
+p3                        =    -0.659704   +/-   5.64556e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix7_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  2.50144e-06
+NDf                       =           86
+Edm                       =  6.55345e-07
+NCalls                    =          308
+p0                        =  0.000380158   +/-   6.26237e-06  	 (limited)
+p1                        =     0.296733   +/-   0.000819495  	 (limited)
+p2                        =     -1.99555   +/-   0.000333919  	 (limited)
+p3                        =    -0.694716   +/-   0.000149787  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix8_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  4.01141e-07
+NDf                       =           86
+Edm                       =  6.54377e-09
+NCalls                    =          269
+p0                        =  0.000169542   +/-   2.03721e-06  	 (limited)
+p1                        =    0.0504722   +/-   0.000317854  	 (limited)
+p2                        =     -1.25543   +/-   0.000100085  	 (limited)
+p3                        =    -0.602229   +/-   7.54943e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix9_2.7<|#eta|<3.0.png has been created
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =  5.35297e-07
+NDf                       =           86
+Edm                       =   3.6417e-07
+NCalls                    =          238
+p0                        =  6.16496e-05   +/-   2.53109e-06  	 (limited)
+p1                        =    0.0166861   +/-   0.000197808  	 (limited)
+p2                        =    -0.186208   +/-   0.000157926  	 (limited)
+p3                        =     0.286548   +/-   7.14683e-05  	 (limited)
+
+Info in <TCanvas::Print>: png file PixPix10_2.7<|#eta|<3.0.png has been created
+DONE
