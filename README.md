@@ -18,7 +18,7 @@ Table of contents
 ------------------------------------
 
 
-# [1] Defining eta region for signal windows based on 3 out of 4 efficiency.
+## [1] Defining eta region for signal windows based on 3 out of 4 efficiency.
 
 시그널 윈도우를 만들땐 네개의 픽셀 클러스터를 활용하게 되는데 gen particle의 에타에 따라 사용하는 픽셀 클러스터의 조합이 달라진다.
 각 에타 영역에서 사용하는 픽셀 조합은 3 out of 4 이피션시를 기준으로 판별하는데 가장 높은 이피션시를 가지는 픽셀 조합을 시그널 윈도우를 만들때 활용한다.
@@ -86,7 +86,7 @@ Devide the eta region based on the highest pixel combination efficiency.
 
 ----------------------------
 
-# [2] Defining Signal windows using single electron samples.
+## [2] Defining Signal windows using single electron samples.
 
 
 
@@ -241,7 +241,7 @@ ROI_...txt -> RegionOfInterst.h
 EGmatching...txt ->  withEM.h 
 Pixelmatching...txt   -> withoutEM.h
 ```
-if you open one of this txt files
+The Copy the following codes.
 ```
 if( region == 2 && i == 0 ){
     p[0] = 0.000924974;
@@ -250,7 +250,6 @@ if( region == 2 && i == 0 ){
     p[3] = 0.126864;
 }
 ```
-Copy this codes.
 
 
 ### step 9 : Paste the paremeters of signal windoiw at following locate.
