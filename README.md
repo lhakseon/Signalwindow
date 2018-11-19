@@ -9,17 +9,16 @@ Table of contents
 1. Defining eta region for signal windows based on 3 out of 4 efficiency.
 2. Defining Signal windows using single electron samples.
 
-이 매뉴얼은 
- 1. 3 out of 4 이피션시를 이용해 각 영역별로 시그널 윈도우를 만들때 고려할 픽셀 조합을 선택하는 방법과
- 2. 파일업이 없는 싱글 일렉트론 샘플을 이용해 시그널 윈도우를 정의하는 방법에 대해 서술되어 있다.
+이 매뉴얼은 3 out of 4 이피션시를 이용해 각 영역별로 시그널 윈도우를 만들때 고려할 픽셀 조합을 선택하는 방법과
+파일업이 없는 싱글 일렉트론 샘플을 이용해 시그널 윈도우를 정의하는 방법에 대해 서술되어 있다.
 각각의 스텝엔 시그널 윈도우를 얻기 위해 무엇을 해야 하는지에 대해 단계순으로 간단히 설명 되어 있다. 각각의 스텝 하단엔 코드의 위치와 수정해야 할 코드의 일부분 기입되 있으며  < >로 처리된 부분을 사용자의 환경에 맞게 수정해야한다.  
 
 
 
+------------------------------------
 
 
-
-#1. Defining eta region for signal windows based on 3 out of 4 efficiency.
+# [1] Defining eta region for signal windows based on 3 out of 4 efficiency.
 
 시그널 윈도우를 만들땐 네개의 픽셀 클러스터를 활용하게 되는데 gen particle의 에타에 따라 사용하는 픽셀 클러스터의 조합이 달라진다.
 각 에타 영역에서 사용하는 픽셀 조합은 3 out of 4 이피션시를 기준으로 판별하는데 가장 높은 이피션시를 가지는 픽셀 조합을 시그널 윈도우를 만들때 활용한다.
@@ -87,7 +86,7 @@ Devide the eta region based on the highest pixel combination efficiency.
 
 ----------------------------
 
-#2. Defining Signal windows using single electron samples.
+# [2] Defining Signal windows using single electron samples.
 
 
 
