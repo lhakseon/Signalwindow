@@ -13,11 +13,11 @@ line 388 ~ 394
 
 ```
    if (tree == 0) {
-       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.root"**);      --- <1>
+       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.root");      --- <1>
            if (!f || !f->IsOpen()) {                                                                            
-               f = new TFile(**"./SingleElectron_NoPU.root"**);                                             
+               f = new TFile("./SingleElectron_NoPU.root");                                             
            }
-       TDirectory * dir = (TDirectory*)f->Get(**"./SingleElectron_NoPU.root:/l1PiXTRKTree"**);        --- <2>
+       TDirectory * dir = (TDirectory*)f->Get("./SingleElectron_NoPU.root:/l1PiXTRKTree");        --- <2>
            dir->GetObject(**"L1PiXTRKTree",tree**);
 
 ```
@@ -41,9 +41,9 @@ a.Loop()
 Eff_nopu.root is generated.
 use this root file as a input of efficiency_check.C
 
-### step 3 : 
+### step 3 : write down the location of Eff_nopu.root at efficiency_check.C and run the code.
 >/signal_windows/signal_windows/basicm/basic_efficiency_check.C
-This code doesn't need a head files.
+- This code doesn't need a head files.
 
 line 13 
 ```
@@ -81,8 +81,7 @@ TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.
 ```
 
 
-### step 2
-at the StorePixelHit, set the pixel combinations for each eta based on [1].
+### step 2 : At the StorePixelHit, set the pixel combinations.
 
 ```
 void sw_dist::StorePixelHit(int region){
@@ -91,7 +90,7 @@ for(int a=0; a<bRecHitN; a++){
 TVector3 current_hit;
 current_hit.SetXYZ( bRecHitGx->at(a), bRecHitGy->at(a), bRecHitGz->at(a) );
 ```    
-these lines define only barrel pixel clusters.
+- these lines define only barrel pixel clusters.
 to define disks of each eta regions, use the following code.
 
 ```
@@ -111,8 +110,8 @@ if( region == 1 ){                              ---<1>
 ```
 
 <1> : region number. Each eta region should have four pixel clusters(layers+disks). 
-<2> : if the pixel is second barrel, bRecHitLayer->at(a) == 2
-        if pixel cluster is 1st Disk, fRecHitDisk.->at(a) == 1;
+<2> : if the pixel is second barrel, ```bRecHitLayer->at(a) == 2```
+        if pixel cluster is 1st Disk, ```fRecHitDisk.->at(a) == 1```
 <3> :
     the most closest pixel cluster : layers[1]
     secondary closest pixel cluseter : layers[2]
@@ -122,11 +121,9 @@ if( region == 1 ){                              ---<1>
 
 
 
+
+### step3 : defining eta range of each eta regions
 >/signal_windows/signal_windows/sw_dist.C
-
-### step3
-defining eta range of each eta regions
-
 
 line 122
 ```
@@ -143,7 +140,7 @@ Set the range of each eta regions.
 
 
 
-### step 4
+### step 4 : run sw_dist.C
 at terminal
 ```
 root sw_dist.C
@@ -156,9 +153,8 @@ sw.root is input file of following codes.
 
 
 
-### step 5
-Signal windows defining.
-Delta Phi signal windows
+### step 5 : set the location of sw.root
+- this step focus on Delta Phi signal windows. 
 
 >signal_windows/signal_windows/fit_median/Make2Dplots.h
 
