@@ -136,14 +136,16 @@ if( region == 1 ){                              ---<1>
 ```
 
 <1> : region number. Each eta region should have four pixel clusters(layers+disks). 
+
 <2> : if the pixel is second barrel, bRecHitLayer->at(a) == 2
         if pixel cluster is 1st Disk, fRecHitDisk.->at(a) == 1
+
 <3> :
     the most closest pixel cluster : layers[1]
     secondary closest pixel cluseter : layers[2]
     ...
 
-<4> : Match pair with <3>. first, second, third, fourth.
+<4> : Match pair with <3> like this way -> first, second, third, fourth.
 
 
 
