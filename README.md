@@ -3,7 +3,33 @@
 
 This manual is based on CMSSW_10_1_X detector geometry.
 
-# Defining eta region for signal windows based on 3 out of 4 efficiency.
+
+Table of contents
+
+1. Defining eta region for signal windows based on 3 out of 4 efficiency.
+2. Defining Signal windows using single electron samples.
+
+이 매뉴얼은 
+ 1. 3 out of 4 이피션시를 이용해 각 영역별로 시그널 윈도우를 만들때 고려할 픽셀 조합을 선택하는 방법과
+ 2. 파일업이 없는 싱글 일렉트론 샘플을 이용해 시그널 윈도우를 정의하는 방법에 대해 서술되어 있다.
+각각의 스텝엔 시그널 윈도우를 얻기 위해 무엇을 해야 하는지에 대해 단계순으로 간단히 설명 되어 있다. 각각의 스텝 하단엔 코드의 위치와 수정해야 할 코드의 일부분 기입되 있으며  < >로 처리된 부분을 사용자의 환경에 맞게 수정해야한다.  
+
+
+
+
+
+
+#1. Defining eta region for signal windows based on 3 out of 4 efficiency.
+
+시그널 윈도우를 만들땐 네개의 픽셀 클러스터를 활용하게 되는데 gen particle의 에타에 따라 사용하는 픽셀 클러스터의 조합이 달라진다.
+각 에타 영역에서 사용하는 픽셀 조합은 3 out of 4 이피션시를 기준으로 판별하는데 가장 높은 이피션시를 가지는 픽셀 조합을 시그널 윈도우를 만들때 활용한다.
+이 파트는 시그널 윈도우를 정의할때 사용할 3 out of 4 픽셀 이피션시의 그래프를 만드는 매뉴얼로 4개의 픽셀 배럴과 2개의 픽셀 디스크에 최적화 되어있다.
+
+
+
+
+
+
 
 ### step1 : set the location of sample for efficiency check.
 
@@ -15,22 +41,23 @@ line 388 ~ 394
    if (tree == 0) {
        TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.root");      --- <1>
            if (!f || !f->IsOpen()) {                                                                            
-               f = new TFile("./SingleElectron_NoPU.root");                                             
+               f = new TFile("./SingleElectron_NoPU.root");                                       --- <1>               
            }
        TDirectory * dir = (TDirectory*)f->Get("./SingleElectron_NoPU.root:/l1PiXTRKTree");        --- <2>
-           dir->GetObject(**"L1PiXTRKTree",tree**);
+           dir->GetObject("L1PiXTRKTree",tree);                                                   --- <2>
 
 ```
 
-<1> : location of NOPU single electron sample.     
-<2> : Name of smaple's tree.
+<1> : write the location of NOPU single electron sample.     
+<2> : write the name of smaple's tree.
 
 
 ### step 2 : Run the basic_study.C 
 
 >signal_windows/signal_windows/basicm/basic_study.C
 
-This code considers 1~4 pixel layers and 1~5 disks. To use additional disk, the relevant code should be added.
+This code considers 1 to 4 pixel layers and 1 to 5 disks. To use additional disk, the relevant code should be added.
+Run the following code as 
 
 ```
 root basic_study.C
@@ -38,10 +65,10 @@ basic_study a
 a.Loop()
 ```
 
-Eff_nopu.root is generated.
+**Eff_nopu.root** is generated.
 use this root file as a input of efficiency_check.C
 
-### step 3 : write down the location of Eff_nopu.root at efficiency_check.C and run the code.
+### step 3 : Set the location of Eff_nopu.root at efficiency_check.C and run the code.
 >/signal_windows/signal_windows/basicm/basic_efficiency_check.C
 - This code doesn't need a head files.
 
@@ -49,32 +76,31 @@ line 13
 ```
 TFile* histFile = new TFile("./Eff_nopu.root");   --- <1>
 ```
-<1> : Input of 2)
+<1> : Set the location of input file(Eff_nopu.root) in here. 
 
 ```
 root efficiency_check.C
 ```
-after running the code, effcheck.png is generated.
+After running the code **effcheck.png** is generated.
 
 Devide the eta region based on the highest pixel combination efficiency.
 
+----------------------------
+
+#2. Defining Signal windows using single electron samples.
 
 
-# Defining Signal windows using single electron samples.
-
-
->/signal_windows/signal_windows/sw_dist.h
 
 ### step 1 : Input the location of No-PU particle sample
+>/signal_windows/signal_windows/sw_dist.h
 line 454
-Input the location of single particle samples.
 
 ```
-TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.root"**);  
+TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.root");  
       if (!f || !f->IsOpen()) {
-          f = new TFile(**"./SingleElectron_NoPU.root"**);                                   
+          f = new TFile("./SingleElectron_NoPU.root");                                   
       }
-      TDirectory * dir = (TDirectory*)f->Get(**"./SingleElectron_NoPU.root:/l1PiXTRKTree"**);
+      TDirectory * dir = (TDirectory*)f->Get("./SingleElectron_NoPU.root:/l1PiXTRKTree");
       dir->GetObject("L1PiXTRKTree",tree);
 
    }
@@ -82,7 +108,7 @@ TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.
 
 
 ### step 2 : At the StorePixelHit, set the pixel combinations.
-
+>/signal_windows/signal_windows/sw_dist.h
 ```
 void sw_dist::StorePixelHit(int region){
 ...
@@ -141,7 +167,7 @@ Set the range of each eta regions.
 
 
 ### step 4 : run sw_dist.C
-at terminal
+At terminal
 ```
 root sw_dist.C
 sw_dist a
@@ -153,7 +179,7 @@ sw.root is input file of following codes.
 
 
 
-### step 5 : set the location of sw.root
+### step 5 : set the location of sw.root at Make2Dplots.h
 - this step focus on Delta Phi signal windows. 
 
 >signal_windows/signal_windows/fit_median/Make2Dplots.h
@@ -170,11 +196,10 @@ if (tree == 0) {
 }
 Init(tree);
 ```
-<1> : input the location of sw.root which is made from 4) 
+<1> : input the location of sw.root
 
 
-### step 6
-Delta Phi signal windows defining
+### step 6 : set the eta range of each eta region.
 >/signal_windows/signal_windows/fit_median/Make2Dplots.C
 
 line 198
@@ -186,10 +211,10 @@ if( eta_ == 4 && (fabs(ntEgEta->at(0)) < 1.7 || fabs(ntEgEta->at(0)) > 2.1)) con
 if( eta_ == 5 && (fabs(ntEgEta->at(0)) < 2.1 || fabs(ntEgEta->at(0)) > 2.7)) continue; 
 if( eta_ == 6 && (fabs(ntEgEta->at(0)) < 2.7 || fabs(ntEgEta->at(0)) > 3.0)) continue; 
 ```
-the eta_ means eta region.
-Set the range of each eta regions ust as 3)
+**eta_** is the eta region.
+Set the range of each eta regions as the same way of step 3.
 
-### step 7
+### step 7 : Specify eta region to draw and get the fitting function of signal window.
 >/signal_windows/signal_windows/fit_median/x_phi.C
 ```
 .L Make2Dplots.C+
@@ -205,15 +230,13 @@ a.Loop(6)
 this example print out the signal windows of regino1 and 6. 
 To get other result of eta region, just delete //.
 
-
-
-### step 8
-at terminal
+After defined the eta region try the following code.
 ```
 ./run.sh
 ```
 than the parameters of fitting function for delta phi signal windows are generated.
-Copy the parameters and paste it at the bellow files.
+
+### step 8 : Copy the parameters and paste it at the bellow files.
 ```
 ROI_...txt -> RegionOfInterst.h
 EGmatching...txt ->  withEM.h 
@@ -231,8 +254,7 @@ if( region == 2 && i == 0 ){
 Copy this codes.
 
 
-### step 9
-paste paremeters from 8) at following functions.
+### step 9 : Paste the paremeters of signal windoiw at following locate.
 
 RegionOfInterst.h:
 ```
@@ -257,7 +279,7 @@ double SW_func2_dphi_v2(int region, int nth, double eget){
         p[3] = -0.818285;
     }
 ```
-    <1> nth == x : x -> 0 : EM_P12, 1 : EM_P13, 2 : EM_P14, 3 : EM_P23, 4: EM_P24, 5: EM_P34
+    <1> : nth == x : x -> 0 : EM_P12, 1 : EM_P13, 2 : EM_P14, 3 : EM_P23, 4: EM_P24, 5: EM_P34
     
     withoutEM.h
 ```
@@ -269,6 +291,6 @@ f( region == 1 && nth == 0 ){       --- <1>
     p[3] = 0.31785;
 }
 ```
-<1> nth == x : x -> 0 : P012, 1 : P013, 2 : P014, 3 : P023, 4: P024, 5: P034, 6: P123, 7: P124, 8: P134, 9: P234
+<1> : nth == x : x -> 0 : P012, 1 : P013, 2 : P014, 3 : P023, 4: P024, 5: P034, 6: P123, 7: P124, 8: P134, 9: P234
 
 
