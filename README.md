@@ -267,7 +267,10 @@ double ROI_func(int region, double eget){
     }
 ```
 
-    withEM.h
+
+withEM.h
+   
+
 ```
 double SW_func2_dphi_v2(int region, int nth, double eget){
     if( region == 1 && nth == 0 ){   --- <1>
@@ -279,7 +282,8 @@ double SW_func2_dphi_v2(int region, int nth, double eget){
 ```
     <1> : nth == x : x -> 0 : EM_P12, 1 : EM_P13, 2 : EM_P14, 3 : EM_P23, 4: EM_P24, 5: EM_P34
     
-    withoutEM.h
+withoutEM.h
+
 ```
 double SW_func1_dphi_v2(int region, int nth, double eget){
 f( region == 1 && nth == 0 ){       --- <1>
