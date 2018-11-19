@@ -5,7 +5,7 @@ This manual is based on CMSSW_10_1_X detector geometry.
 
 # Defining eta region for signal windows based on 3 out of 4 efficiency.
 
-### step1
+### step1 : set the location of sample for efficiency check.
 
 >signal_windows_/signal_windows/basicm/basic_study.h
 
@@ -13,12 +13,12 @@ line 388 ~ 394
 
 ```
    if (tree == 0) {
-             TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.root");                      --- <1>
-                   if (!f || !f->IsOpen()) {                                                                            
-                                f = new TFile("./SingleElectron_NoPU.root");                                             
-                                      }
-                         TDirectory * dir = (TDirectory*)f->Get("./SingleElectron_NoPU.root:/l1PiXTRKTree");            --- <2>
-                               dir->GetObject("L1PiXTRKTree",tree);
+       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.root"**);      --- <1>
+           if (!f || !f->IsOpen()) {                                                                            
+               f = new TFile(**"./SingleElectron_NoPU.root"**);                                             
+           }
+       TDirectory * dir = (TDirectory*)f->Get(**"./SingleElectron_NoPU.root:/l1PiXTRKTree"**);        --- <2>
+           dir->GetObject(**"L1PiXTRKTree",tree**);
 
 ```
 
@@ -26,7 +26,7 @@ line 388 ~ 394
 <2> : Name of smaple's tree.
 
 
-### step 2
+### step 2 : Run the basic_study.C 
 
 >signal_windows/signal_windows/basicm/basic_study.C
 
@@ -41,7 +41,7 @@ a.Loop()
 Eff_nopu.root is generated.
 use this root file as a input of efficiency_check.C
 
-### step 3
+### step 3 : 
 >/signal_windows/signal_windows/basicm/basic_efficiency_check.C
 This code doesn't need a head files.
 
@@ -65,16 +65,16 @@ Devide the eta region based on the highest pixel combination efficiency.
 
 >/signal_windows/signal_windows/sw_dist.h
 
-### step 1
+### step 1 : Input the location of No-PU particle sample
 line 454
 Input the location of single particle samples.
 
 ```
-TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.root");
+TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject(**"./SingleElectron_NoPU.root"**);  
       if (!f || !f->IsOpen()) {
-          f = new TFile("./SingleElectron_NoPU.root");
+          f = new TFile(**"./SingleElectron_NoPU.root"**);                                   
       }
-      TDirectory * dir = (TDirectory*)f->Get("./SingleElectron_NoPU.root:/l1PiXTRKTree");
+      TDirectory * dir = (TDirectory*)f->Get(**"./SingleElectron_NoPU.root:/l1PiXTRKTree"**);
       dir->GetObject("L1PiXTRKTree",tree);
 
    }
