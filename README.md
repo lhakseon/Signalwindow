@@ -83,7 +83,8 @@ root efficiency_check.C
 ```
 After running the code **effcheck.png** is generated.
 
-Devide the eta region based on the highest pixel combination efficiency.
+You can find the Devided eta region checking effcheck.png.
+Select the most highest efficinecy of pixel combination in each eta region.
 
 ----------------------------
 
