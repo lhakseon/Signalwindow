@@ -32,7 +32,7 @@ Table of contents
 
 
 ### step1 : set the location of sample for efficiency check.
-
+아래의 경로에 efficiency check에 사용할 No-pileup electron sample의 위치를 지정한다.
 >signal_windows_/signal_windows/basicm/basic_study.h
 
 line 388 ~ 394 
@@ -53,7 +53,7 @@ line 388 ~ 394
 
 
 ### step 2 : Run the basic_study.C 
-
+basic_study.C를 터미널에서 실행시켜 Eff_nopu.root를 얻는다.
 >signal_windows/signal_windows/basicm/basic_study.C
 
 This code considers 1 to 4 pixel layers and 1 to 5 disks. To use additional disk, the relevant code should be added.
@@ -69,7 +69,9 @@ a.Loop()
 use this root file as a input of efficiency_check.C
 
 ### step 3 : Set the location of Eff_nopu.root at efficiency_check.C and run the code.
+Eff_nopu.root가 저장된 위치를 efficinecy_check.C에 지정한다.
 >/signal_windows/signal_windows/basicm/basic_efficiency_check.C
+
 - This code doesn't need a head files.
 
 line 13 
@@ -93,6 +95,7 @@ Select the most highest efficinecy of pixel combination in each eta region.
 
 
 ### step 1 : Input the location of No-PU particle sample
+Input으로 사용할 No-PU particle 샘플의 경로를 sw_dist.h에 지정해준다.
 >/signal_windows/signal_windows/sw_dist.h
 line 454
 
@@ -109,6 +112,7 @@ TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("./SingleElectron_NoPU.ro
 
 
 ### step 2 : At the StorePixelHit, set the pixel combinations.
+sw_dist.h에서 각각의 에타 영역에 대한 pixel combination을 정의한다.
 >/signal_windows/signal_windows/sw_dist.h
 ```
 void sw_dist::StorePixelHit(int region){
@@ -152,6 +156,7 @@ if( region == 1 ){                              ---<1>
 
 
 ### step3 : defining eta range of each eta regions
+sw_dist.C에서 eta region의 범위를 정의한다.
 >/signal_windows/signal_windows/sw_dist.C
 
 line 122
@@ -170,6 +175,7 @@ Set the range of each eta regions.
 
 
 ### step 4 : run sw_dist.C
+터미널에서 sw_dist.C를 실행하여 sw.root 파일을 생성한다.
 At terminal
 ```
 root sw_dist.C
@@ -183,6 +189,7 @@ sw.root is input file of following codes.
 
 
 ### step 5 : set the location of sw.root at Make2Dplots.h
+step4에서 생성된 sw.root를 Make2Dplot.h의 인풋으로 지정한다.
 - this step focus on Delta Phi signal windows. 
 
 >signal_windows/signal_windows/fit_median/Make2Dplots.h
@@ -203,6 +210,7 @@ Init(tree);
 
 
 ### step 6 : set the eta range of each eta region.
+Make2Dplots.C에서 각각의 에타 영역의 범위를 정의한다.
 >/signal_windows/signal_windows/fit_median/Make2Dplots.C
 
 line 198
@@ -218,6 +226,7 @@ if( eta_ == 6 && (fabs(ntEgEta->at(0)) < 2.7 || fabs(ntEgEta->at(0)) > 3.0)) con
 Set the range of each eta regions as the same way of step 3.
 
 ### step 7 : Specify eta region to draw and get the fitting function of signal window.
+x_phi.C에서 시그널 윈도우를 출력할 eta region을 정의한다. run.sh를 실행시키면 시그널 윈도우의 피팅 함수를 얻을 수 있다.
 >/signal_windows/signal_windows/fit_median/x_phi.C
 ```
 .L Make2Dplots.C+
@@ -234,18 +243,31 @@ this example print out the signal windows of regino1 and 6.
 To get other result of eta region, just delete //.
 
 After defined the eta region try the following code.
+
+### step 8 : run the following code and get copy the fitting function.
+아래의 코드를 실행하면 delta phi에 대한 시그널 윈도우의 피팅함수와 파라미터를 획득할 수 있다. 
+
 ```
 ./run.sh
 ```
 than the parameters of fitting function for delta phi signal windows are generated.
 
-### step 8 : Copy the parameters and paste it at the bellow files.
+```
+ROI_...txt
+EGmatching...txt
+Pixelmatching...txt
+```
+
+
+### step 9-1 : Copy the parameters and paste it at the bellow files.
+step 8에서 생성된 피팅함수를 복사해서 다음 위치의 파일에 붙여넣는다..
 ```
 ROI_...txt -> RegionOfInterst.h
 EGmatching...txt ->  withEM.h 
 Pixelmatching...txt   -> withoutEM.h
 ```
-The Copy the following codes.
+
+각각의 텍스트 파일에서 아래의 텍스트를 복사해야 한다.
 ```
 if( region == 2 && i == 0 ){
     p[0] = 0.000924974;
@@ -256,8 +278,8 @@ if( region == 2 && i == 0 ){
 ```
 
 
-### step 9 : Paste the paremeters of signal windoiw at following locate.
-
+#step 9-2.
+복사한 파라미터를 붙여넣을때 고려해야 할 사항
 RegionOfInterst.h:
 ```
 double ROI_func(int region, double eget){
@@ -270,7 +292,7 @@ double ROI_func(int region, double eget){
         p[4] =  1.27837;
     }
 ```
-
+Region of Interest는 step 9에서 i는 무시하고 오직 region만을 고려한다.
 
 withEM.h
    
@@ -284,9 +306,14 @@ double SW_func2_dphi_v2(int region, int nth, double eget){
         p[3] = -0.818285;
     }
 ```
-    <1> : nth == x : x -> 0 : EM_P12, 1 : EM_P13, 2 : EM_P14, 3 : EM_P23, 4: EM_P24, 5: EM_P34
+
+    EM-Pixel matching의 시그널 윈도우를 정의하는 코드이다.region과 함께 <1>의 nth에 픽셀 조합에 따라 다른 숫자를 기입한다.
+    각각의 숫자에 따른 EM-Pixel 조합은 아래와 같다.
+    <1> : nth == x : x -> 0 : EM_Pixel12, 1 : EM_Pixel13, 2 : EM_Pixel14, 3 : EM_Pixel23, 4: EM_Pixel24, 5: EM_Pixel34
     
 withoutEM.h
+
+
 
 ```
 double SW_func1_dphi_v2(int region, int nth, double eget){
@@ -297,6 +324,7 @@ f( region == 1 && nth == 0 ){       --- <1>
     p[3] = 0.31785;
 }
 ```
+마찬가지로 nth에 Pixel-Pixel matching의 조합에 따라 <1>의 nth에 다른 숫자를 기입한다.
 <1> : nth == x : x -> 0 : P012, 1 : P013, 2 : P014, 3 : P023, 4: P024, 5: P034, 6: P123, 7: P124, 8: P134, 9: P234
-
+0 means beam spot.
 
