@@ -128,8 +128,31 @@ python submit_control.py
 hadd Result_all.root workspace/.../output/Tree/*.root
 ```
 
-작성중 
+생성된 Result_all.root 파일을 efficiency drawing code의 input으로 사용한다. 
 
+### Set the input file in efficiency plot drawing code.
+위의 과정에서 생성된 Result_all.root 파일의 경로를 아래의 파일에 지정해준다.
+>Signalwindow/L1PixEle-EffPlot/eff_plot.h
+line 115
+```
+if (tree == 0) {
+TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Result_all.root"); ---<1>
+if (!f || !f->IsOpen()) {
+f = new TFile("Result_all.root");                                          ---<1>
+}
+f->GetObject("t",tree);
+```
+<1> : Set the location of Result_all.root.
+
+### Run the efficiency drawing code.
+eff_plot.C를 실행시켜 efficiecny plot인 Eff.png 파일을 생성한다.
+>Signalwindow/L1PixEle-EffPlot/eff_plot.C
+
+```
+root eff_plot.C
+eff_plot a
+a.Loop()
+```
 
 
 

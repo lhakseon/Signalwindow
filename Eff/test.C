@@ -291,9 +291,7 @@ void test::Loop()
        if( nth_eg_pix_deta != 0) continue;
       
        if(eta_region == 1) SetSingalBoundary(eta_region, EM_PiX_dphi_width_[nth_eg_pix_deta], EM_PiX_deta_width_[nth_eg_pix_deta], PiX_PiX_dphi_width_[nth_eg_pix_deta], PiX_PiX_deta_width_[nth_eg_pix_deta]);
-       else if(eta_region == 2) SetSingalBoundary(eta_region, EM_PiX_dphi_width_[nth_eg_pix_deta+1], EM_PiX_deta_width_[nth_eg_pix_deta+1], PiX_PiX_dphi_width_[nth_eg_pix_deta+1], PiX_PiX_deta_width_[nth_eg_pix_deta+1]);
-       else SetSingalBoundary(eta_region, EM_PiX_dphi_width_[nth_eg_pix_deta], EM_PiX_deta_width_[nth_eg_pix_deta], PiX_PiX_dphi_width_[nth_eg_pix_deta], PiX_PiX_deta_width_[nth_eg_pix_deta]);
-       if( fabs(EgEta) <=3.0 && fabs(EgEta) > 2.9) SetSingalBoundary(eta_region, EM_PiX_dphi_width_[nth_eg_pix_deta+8], EM_PiX_deta_width_[nth_eg_pix_deta+8], PiX_PiX_dphi_width_[nth_eg_pix_deta+8], PiX_PiX_deta_width_[nth_eg_pix_deta+8]);
+       else SetSingalBoundary(eta_region, EM_PiX_dphi_width_[nth_eg_pix_deta+1], EM_PiX_deta_width_[nth_eg_pix_deta+1], PiX_PiX_dphi_width_[nth_eg_pix_deta+1], PiX_PiX_deta_width_[nth_eg_pix_deta+1]);
 
        //SetSingalBoundary(1);
 
